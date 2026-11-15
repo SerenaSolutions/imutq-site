@@ -1,0 +1,56 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IMUT-Q — prova de integridade para resultados quânticos</title>
+<style>
+:root{--bg:#0e1116;--fg:#e6edf3;--dim:#8b949e;--line:#30363d;--blue:#1f6feb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:720px;margin:0 auto;padding:56px 22px 80px}
+h1{font-size:34px;line-height:1.15;margin:0 0 6px;letter-spacing:-.5px}
+.sub{color:var(--dim);font-size:15px;margin-bottom:34px}
+h2{font-size:19px;margin:36px 0 10px}
+p{color:#c9d1d9}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12px;color:var(--dim);margin:0 6px 6px 0}
+.tres{display:flex;gap:10px;margin:18px 0}
+.card{flex:1;border:1px solid var(--line);border-radius:10px;padding:14px;background:#161b22;text-align:center}
+.card b{display:block;font-size:22px;margin-bottom:4px}
+.um{color:#3fb950}.zero{color:#f85149}.rec{color:#d29922}
+code{background:#161b22;border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:13px}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+a{color:var(--blue)}
+</style></head><body><main>
+<h1>IMUT-Q</h1>
+<div class="sub">Prova de integridade para resultados de computação quântica. Serena Solutions.</div>
+
+<p>Um resultado quântico não vale nada se ninguém consegue conferir de onde veio. O IMUT-Q transforma
+cada execução em um recibo verificável: o que rodou, em qual máquina, com quantos tiros, qual foi o
+resultado, e uma assinatura pós-quântica que prova quem emitiu.</p>
+
+<div>
+<span class="pill">SHA3-256</span><span class="pill">ML-DSA-44</span><span class="pill">OpenQASM 2.0 e 3</span><span class="pill">Rust no núcleo</span><span class="pill">Verificação no navegador</span>
+</div>
+
+<h2>Três estados, nunca dois</h2>
+<div class="tres">
+<div class="card"><b class="um">1</b>aprovado com evidência</div>
+<div class="card"><b class="zero">0</b>reprovado com motivo</div>
+<div class="card"><b class="rec">REFUSED</b>sem evidência suficiente</div>
+</div>
+<p>O terceiro estado é a razão de existir. Um verificador que só sabe dizer sim ou não acaba dizendo
+sim quando não sabe. Este prefere recusar.</p>
+
+<h2>Verificação no seu navegador</h2>
+<p>A extensão confere o recibo sem enviar nada a servidor algum: recalcula o SHA3-256 do conteúdo e
+verifica a assinatura ML-DSA-44 dentro do navegador, com o mesmo núcleo em Rust compilado para
+WebAssembly. Nada sai do seu computador.</p>
+
+<h2>O que o recibo carrega</h2>
+<p>Identificador do job capturado na submissão, provedor, backend, número de tiros, contagens brutas,
+hash do circuito, versões e a proveniência declarada: hardware, simulador de nuvem ou simulação local.
+Simulação nunca é apresentada como hardware.</p>
+
+<footer>
+Serena Solutions · IMUT-Q · <a href="privacidade.html">Política de privacidade</a><br>
+Licença do código: Apache-2.0. Documentação técnica sob solicitação.
+</footer>
+</main></body></html>
